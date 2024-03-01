@@ -1,0 +1,228 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 200vh;
+    background-color: black;
+}
+
+header{
+    /* background-color: blue; */
+    padding:  20px 20px;
+    transition: 0.6s;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+}
+
+header.sticky {
+    background-color: blue;
+    padding:  20px 20px;
+    transition: 0.6s;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+}
+
+
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.logo:hover{
+    -webkit-text-stroke: 1px  white;
+    color: transparent;
+}
+
+.menu-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+}
+.menu-list a{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+}
+
+
+.hamburger{
+    cursor: pointer;
+    display: none;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+}
+
+.scroll_to_top{
+    position: fixed;
+    background-color: white;
+    bottom: 40px;
+    right: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99999;
+    transition: 0.5s;
+}
+
+.scroll_to_top img{
+    width: 30px;
+}
+
+.scroll_to_top.scroll{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media(max-width: 700px){
+    header{
+        /* background-color: blue; */
+        padding:  20px 20px;
+    }
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger:active{
+        background-color: rgb(141, 136, 136);
+
+    }
+    
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menu-list{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: blue;
+        left: 0;
+        top: 68px;
+        gap: 40px;
+        padding: 40px;
+        width: 100%;
+        list-style: none;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(-5000px);
+    }
+
+    .menu-list{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: blue;
+        left: 0;
+        top: 68px;
+        gap: 40px;
+        padding: 40px;
+        width: 100%;
+        list-style: none;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(-5000px);
+    }
+
+    .menu-list.show{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: blue;
+        left: 0;
+        top: 68px;
+        gap: 40px;
+        padding: 40px;
+        width: 100%;
+        list-style: none;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(0px);
+    }
+    
+
+    .menu-list li{
+        width: 100%;
+        /* text-align: center; */
+        transition: 0.5s;
+    }
+
+    .menu-list li:hover{
+        border-left: 5px solid white;
+        padding: 10px 10px 10px 10px ;
+        background-color: rgb(62, 62, 201);
+        /* text-align: right; */
+    }
+
+    .menu-list li:active{
+        border-left: 5px solid white;
+        padding: 10px 10px 10px 10px ;
+        background-color: rgb(123, 123, 240);
+        
+    }
+
+    .menu-list a{
+        text-decoration: none;
+        color: white;
+        letter-spacing: 2px;
+        width: 100%;
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
